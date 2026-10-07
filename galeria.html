@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Galería de eventos y setups de COSTAGOMESDJ">
+<title>Galería | COSTAGOMESDJ</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ctext%20y=%27.9em%27%20font-size=%2790%27%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/main.js" defer></script>
+<script src="js/galeria.js" defer></script>
+</head>
+<body>
+<header>
+<div class="logo">SONYCOLOR</div>
+<button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
+<nav id="main-nav" aria-label="Principal"><a href="index.html">Inicio</a><a href="index.html#musica">Música</a><a href="galeria.html" class="active" aria-current="page">Galería</a><a href="presupuesto.html">Presupuesto</a><a href="contacto.html">Contacto</a></nav>
+</header>
+<main>
+<section class="page-section" aria-labelledby="t-galeria">
+<h1 id="t-galeria" class="section-title text-center">Nuestro Trabajo</h1>
+<p class="text-center">Explora los últimos eventos y setups de COSTAGOMESDJ.</p>
+<div id="carrusel" class="carrusel" role="region" aria-roledescription="carrusel" aria-label="Eventos destacados">
+<div id="slides" class="slides"></div>
+<button type="button" id="car-prev" class="car-btn prev" aria-label="Imagen anterior">&#10094;</button>
+<button type="button" id="car-next" class="car-btn next" aria-label="Imagen siguiente">&#10095;</button>
+<div id="dots" class="dots"></div>
+</div>
+<div id="gallery-container" class="gallery-grid"></div>
+</section>
+<div id="gallery-modal" class="modal" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+<button type="button" id="close-modal" class="close-modal" aria-label="Cerrar">&times;</button>
+<img class="modal-content" id="modal-img" alt="Imagen ampliada" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+</div>
+</main>
+<footer>
+<div class="footer-grid">
+<div><strong>COSTAGOMESDJ</strong><p>DJ profesional &middot; SONYCOLOR</p></div>
+<nav aria-label="Pie de página"><a href="index.html">Inicio</a><a href="index.html#musica">Música</a><a href="galeria.html">Galería</a><a href="presupuesto.html">Presupuesto</a><a href="contacto.html">Contacto</a></nav>
+<div><a href="https://suno.com/@henriquedj" target="_blank" rel="noopener noreferrer">Escúchame en Suno</a></div>
+</div>
+<p>&copy; <span id="year">2026</span> COSTAGOMESDJ (SONYCOLOR). Todos los derechos reservados. Mapas &copy; colaboradores de OpenStreetMap.</p>
+</footer>
+</body>
+</html>

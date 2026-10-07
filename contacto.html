@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contacta con COSTAGOMESDJ y consulta cómo llegar al estudio">
+<title>Contacto | COSTAGOMESDJ</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ctext%20y=%27.9em%27%20font-size=%2790%27%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="js/main.js" defer></script>
+<script src="js/contacto.js" defer></script>
+</head>
+<body>
+<header>
+<div class="logo">SONYCOLOR</div>
+<button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
+<nav id="main-nav" aria-label="Principal"><a href="index.html">Inicio</a><a href="index.html#musica">Música</a><a href="galeria.html">Galería</a><a href="presupuesto.html">Presupuesto</a><a href="contacto.html" class="active" aria-current="page">Contacto</a></nav>
+</header>
+<main>
+<section class="page-section" aria-labelledby="t-contacto">
+<h1 id="t-contacto" class="section-title text-center">Contacto</h1>
+<div class="contact-grid">
+<div>
+<form id="contacto-form" novalidate>
+<div class="form-group">
+<label for="nombre">Nombre*</label>
+<input type="text" id="nombre" name="nombre" autocomplete="name" required aria-describedby="err-nombre">
+<span class="error-msg" id="err-nombre">El nombre debe tener al menos 3 caracteres.</span>
+</div>
+<div class="form-group">
+<label for="email">Email*</label>
+<input type="email" id="email" name="email" autocomplete="email" required aria-describedby="err-email">
+<span class="error-msg" id="err-email">Introduce un email válido (ej. nombre@dominio.com).</span>
+</div>
+<div class="form-group">
+<label for="telefono">Teléfono (opcional)</label>
+<input type="text" id="telefono" name="telefono" inputmode="tel" autocomplete="tel" aria-describedby="err-telefono">
+<span class="error-msg" id="err-telefono">Introduce un teléfono español de 9 dígitos (opcionalmente con +34).</span>
+</div>
+<div class="form-group">
+<label for="mensaje">Mensaje*</label>
+<textarea id="mensaje" name="mensaje" rows="5" required aria-describedby="err-mensaje"></textarea>
+<span class="error-msg" id="err-mensaje">El mensaje no puede estar vacío.</span>
+</div>
+<button type="submit">Enviar Mensaje</button>
+<p id="contacto-ok" class="form-status" role="status" hidden></p>
+</form>
+</div>
+<div>
+<h2>Nuestra Ubicación (Estudio)</h2>
+<div id="map" role="region" aria-label="Mapa con la ubicación del estudio"></div>
+<div class="route-box">
+<button type="button" id="btn-ruta" class="btn-secondary">Trazar ruta hasta el estudio</button>
+<p id="ruta-info" role="status"></p>
+<a id="ruta-osm" href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer" hidden>Ver indicaciones paso a paso en OpenStreetMap</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-grid">
+<div><strong>COSTAGOMESDJ</strong><p>DJ profesional &middot; SONYCOLOR</p></div>
+<nav aria-label="Pie de página"><a href="index.html">Inicio</a><a href="index.html#musica">Música</a><a href="galeria.html">Galería</a><a href="presupuesto.html">Presupuesto</a><a href="contacto.html">Contacto</a></nav>
+<div><a href="https://suno.com/@henriquedj" target="_blank" rel="noopener noreferrer">Escúchame en Suno</a></div>
+</div>
+<p>&copy; <span id="year">2026</span> COSTAGOMESDJ (SONYCOLOR). Todos los derechos reservados. Mapas &copy; colaboradores de OpenStreetMap.</p>
+</footer>
+</body>
+</html>

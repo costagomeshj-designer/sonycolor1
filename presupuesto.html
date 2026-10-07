@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cotizador online de servicios de DJ con descuentos por horas y pack de extras">
+<title>Presupuesto | COSTAGOMESDJ</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ctext%20y=%27.9em%27%20font-size=%2790%27%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/main.js" defer></script>
+<script src="js/presupuesto.js" defer></script>
+</head>
+<body>
+<header>
+<div class="logo">SONYCOLOR</div>
+<button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
+<nav id="main-nav" aria-label="Principal"><a href="index.html">Inicio</a><a href="index.html#musica">Música</a><a href="galeria.html">Galería</a><a href="presupuesto.html" class="active" aria-current="page">Presupuesto</a><a href="contacto.html">Contacto</a></nav>
+</header>
+<main>
+<section class="page-section" aria-labelledby="t-presupuesto">
+<h1 id="t-presupuesto" class="section-title text-center">Cotizador Online</h1>
+<div class="budget-form-container">
+<form id="presupuesto-form">
+<div class="form-group">
+<label for="tipo-evento">Tipo de Evento</label>
+<select id="tipo-evento" name="tipo-evento" required>
+<option value="">Selecciona un tipo...</option>
+<option value="300">Fiesta Privada (Base: 300€)</option>
+<option value="500">Boda / Enlace (Base: 500€)</option>
+<option value="400">Club / Discoteca (Base: 400€)</option>
+<option value="800">Festival (Base: 800€)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="horas">Horas de Sesión (de 2 a 12 h)</label>
+<input type="number" id="horas" name="horas" min="2" max="12" value="2" required aria-describedby="err-horas">
+<span class="error-msg" id="err-horas">Introduce un número entero de horas entre 2 y 12.</span>
+</div>
+<fieldset class="form-group">
+<legend>Servicios Extra</legend>
+<div class="checkbox-group"><input type="checkbox" id="extra-iluminacion" name="extra" class="extra-item" value="150"><label for="extra-iluminacion">Iluminación Láser/LED (+150€)</label></div>
+<div class="checkbox-group"><input type="checkbox" id="extra-humo" name="extra" class="extra-item" value="50"><label for="extra-humo">Máquina de Humo (+50€)</label></div>
+<div class="checkbox-group"><input type="checkbox" id="extra-altavoces" name="extra" class="extra-item" value="200"><label for="extra-altavoces">Sistema PA Adicional (+200€)</label></div>
+</fieldset>
+<div class="form-group">
+<div class="checkbox-group"><input type="checkbox" id="acepto-terminos" name="terminos" required><label for="acepto-terminos">Acepto las condiciones generales del servicio*</label></div>
+</div>
+<div class="budget-total-box">
+<h2>Presupuesto Estimado</h2>
+<table class="desglose">
+<caption class="sr-only">Desglose del presupuesto en euros</caption>
+<tbody>
+<tr><th scope="row">Tarifa base</th><td><span id="d-base">0.00</span> €</td></tr>
+<tr><th scope="row">Horas extra (+50€/h desde la 3.ª)</th><td><span id="d-horas">0.00</span> €</td></tr>
+<tr><th scope="row">Servicios extra</th><td><span id="d-extras">0.00</span> €</td></tr>
+<tr><th scope="row">Subtotal</th><td><span id="d-subtotal">0.00</span> €</td></tr>
+<tr class="row-desc"><th scope="row">Descuento (<span id="d-pct">0</span>%)</th><td><span id="d-descuento">-0.00</span> €</td></tr>
+</tbody>
+</table>
+<div class="total-price"><span id="precio-total">0.00</span>€</div>
+<p class="desglose-nota">Descuentos: 10% a partir de 6 h, 15% a partir de 10 h, y 5% adicional si contratas los 3 servicios extra.</p>
+</div>
+<button type="submit" id="btn-enviar-presupuesto" disabled>Solicitar Reserva</button>
+<p id="presupuesto-msg" class="form-status" role="status" hidden></p>
+</form>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-grid">
+<div><strong>COSTAGOMESDJ</strong><p>DJ profesional &middot; SONYCOLOR</p></div>
+<nav aria-label="Pie de página"><a href="index.html">Inicio</a><a href="index.html#musica">Música</a><a href="galeria.html">Galería</a><a href="presupuesto.html">Presupuesto</a><a href="contacto.html">Contacto</a></nav>
+<div><a href="https://suno.com/@henriquedj" target="_blank" rel="noopener noreferrer">Escúchame en Suno</a></div>
+</div>
+<p>&copy; <span id="year">2026</span> COSTAGOMESDJ (SONYCOLOR). Todos los derechos reservados. Mapas &copy; colaboradores de OpenStreetMap.</p>
+</footer>
+</body>
+</html>
